@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>dark to light</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #222;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-theme {
+            background: #222;
+            color: #eee;
+        }
+        button {
+            margin-right: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .theme-text {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: #222;
+            transition: color 0.3s;
+        }
+        .dark-theme .theme-text {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button id="lightBtn">Light Theme</button>
+    <button id="darkBtn">Dark Theme</button>
+    <div class="theme-text">Black in white? Or White in black.</div>
+    <script>
+        const body = document.body;
+        const lightBtn = document.getElementById('lightBtn');
+        const darkBtn = document.getElementById('darkBtn');
+
+        lightBtn.onclick = () => body.classList.remove('dark-theme');
+        darkBtn.onclick = () => body.classList.add('dark-theme');
+    </script>
+</body>
+</html>
